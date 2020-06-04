@@ -4,6 +4,17 @@ Created on Mon Apr 27 18:05:48 2020
 
 @author: samdw
 """
+
+# Need to create clearly defined rules at some point.
+# Basic idea: Two player game in which player one plays characters 1,2 or 3 followed by player two player a 1,2 or 3. Player one and 
+# Player two must place moves in such as way as to not violate the Latin square property. 
+# Player one wins if player one and two's moves lead to a latin square within the array. Player two wins if there is 
+# no way to achive a latin square at some point during the game.
+
+# To do list.
+# Create a function to define to create an nxn board
+# Possibly create a GUI (Tkinter Package....need to look into this)
+
 import numpy as np
 import  pandas as pd
 import matplotlib as plt
@@ -41,7 +52,7 @@ def Latin_Sq_Pop_Rows():
              print(board) 
  
     
-
+# This is a cool capability but I think I need to omit for the game. The player blocking the Latin Square needs more options to work with. 
 def Latin_Sq_Pop_Cols():
      for i in range(0,3):
          if board[0][i] != '-' and board[1][i] != '-' and board[2][i] == '-':
